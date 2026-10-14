@@ -9,63 +9,59 @@ export default function PrivacyPage() {
     <LegalLayout title="Privacy Policy">
       <p>
         This Privacy Policy explains what information {site.name} (the
-        &quot;Service&quot;) collects, how it is used, and the choices you
-        have.
+        &quot;Service&quot;) collects and how it is used. The Service is a
+        private tool built and operated by {site.owner} (&quot;the
+        Owner&quot;) for the Owner&apos;s own channel. It is not offered to the
+        public, so the only person whose data is processed is the Owner.
       </p>
 
       <section>
-        <h2>1. Information we collect</h2>
+        <h2>1. Information the Service processes</h2>
         <ul>
           <li>
-            <strong>Google account:</strong> your name, email address and
-            profile picture, used only to sign you in.
+            <strong>Google account:</strong> name, email address and profile
+            picture, used only to sign in and to verify that the signed-in
+            account is the Owner&apos;s.
           </li>
           <li>
-            <strong>TikTok account (only if you connect it):</strong> your
-            profile information (display name, avatar), public profile
-            statistics, and your own video list with view, like, comment and
-            share counts, based on the permissions you approve.
+            <strong>TikTok account (when connected):</strong> profile
+            information (display name, avatar), profile statistics such as
+            follower and like counts, and the account&apos;s own video list
+            with view, like, comment and share counts, according to the
+            permissions the Owner approves.
           </li>
           <li>
-            <strong>Content you enter:</strong> ideas, scripts, captions,
-            hashtags, schedules and statistics files you import.
-          </li>
-          <li>
-            <strong>Videos you upload</strong> to the Service, if you use the
-            upload or publishing features.
+            <strong>Content entered by the Owner:</strong> ideas, scripts,
+            captions, hashtags, schedules and imported statistics files.
           </li>
         </ul>
       </section>
 
       <section>
-        <h2>2. How we use information</h2>
+        <h2>2. How the information is used</h2>
         <ul>
-          <li>To provide the planning, scheduling and analytics features.</li>
-          <li>To show performance statistics of your own channel.</li>
+          <li>To provide planning, scheduling and analytics features.</li>
+          <li>To display performance statistics of the connected channel.</li>
           <li>
-            To upload or publish videos to your TikTok account, only when you
-            explicitly request it.
-          </li>
-          <li>
-            To generate content suggestions. The text you submit for this
-            purpose (for example a topic or channel description) is sent to a
-            third-party AI provider to produce the result.
+            To generate content suggestions. Text submitted for this purpose
+            (such as a topic or channel description) is sent to a third-party
+            AI provider to produce the result.
           </li>
         </ul>
         <p>
-          We do not sell your personal information and do not use it for
-          advertising.
+          The information is read-only with respect to TikTok unless the Owner
+          explicitly requests an action. It is not sold, not used for
+          advertising, and not used to build profiles of any other person.
         </p>
       </section>
 
       <section>
-        <h2>3. Sharing</h2>
+        <h2>3. Service providers</h2>
         <p>
-          We share data only with service providers needed to run the Service:
-          hosting and database providers, file storage, an AI provider for
-          suggestions, and the platforms you connect (such as TikTok) when you
-          instruct us to act on them. We may disclose information if required
-          by law.
+          Data is processed by the providers needed to run the Service:
+          website hosting, a database, file storage, an AI provider for
+          suggestions, and Google and TikTok for sign-in and channel data.
+          Information is disclosed otherwise only if required by law.
         </p>
       </section>
 
@@ -74,52 +70,40 @@ export default function PrivacyPage() {
         <p>
           Data is stored with reputable cloud providers. Access tokens issued
           by TikTok or Google are stored encrypted and used only to perform
-          actions you requested. No method of transmission or storage is
-          completely secure, but we take reasonable measures to protect your
-          data.
+          requests made by the Owner. Access to the Service is restricted to
+          the Owner&apos;s Google account.
         </p>
       </section>
 
       <section>
-        <h2>5. Retention and deletion</h2>
-        <p>
-          We keep your data while your account is active. You can disconnect
-          TikTok at any time, which deletes the stored tokens and TikTok data
-          obtained through it. You can also request deletion of all your data
-          by emailing us at the address below.
-        </p>
-      </section>
-
-      <section>
-        <h2>6. Your choices</h2>
+        <h2>5. Retention, revocation and deletion</h2>
         <ul>
           <li>
-            Revoke access to this Service from your TikTok settings (Settings
-            and privacy → Security &amp; permissions → Manage app permissions)
-            or your Google Account permissions page.
+            Disconnecting TikTok in the Service deletes the stored TikTok
+            tokens and the TikTok data obtained through them.
           </li>
-          <li>Access, correct or delete your data on request.</li>
+          <li>
+            Access can also be revoked at any time in TikTok (Settings and
+            privacy → Security &amp; permissions → Manage app permissions) or
+            in the Google Account permissions page.
+          </li>
+          <li>
+            All stored data can be deleted on request; contact the address
+            below.
+          </li>
         </ul>
       </section>
 
       <section>
-        <h2>7. Children</h2>
+        <h2>6. Changes</h2>
         <p>
-          The Service is not directed to children under 13 and we do not
-          knowingly collect their information.
+          This policy may be updated; the &quot;Last updated&quot; date above
+          shows the latest version.
         </p>
       </section>
 
       <section>
-        <h2>8. Changes</h2>
-        <p>
-          We may update this policy; the &quot;Last updated&quot; date shows the
-          latest version.
-        </p>
-      </section>
-
-      <section>
-        <h2>9. Contact</h2>
+        <h2>7. Contact</h2>
         <p>
           Privacy questions or requests:{" "}
           <a className="underline" href={`mailto:${site.contactEmail}`}>

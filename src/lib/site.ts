@@ -1,6 +1,8 @@
-// Đổi các giá trị này khi chốt tên app / domain / email liên hệ.
+// Có thể ghi đè bằng biến môi trường trên Vercel.
 export const site = {
-  name: process.env.NEXT_PUBLIC_APP_NAME ?? "ContentHub",
-  contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "contact@example.com",
-  lastUpdated: "October 11, 2026",
+  name: process.env.NEXT_PUBLIC_APP_NAME ?? "Hunee Content Hub",
+  owner: "Hunee",
+  contactEmail:
+    process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "hungle692002@gmail.com",
+  lastUpdated: "October 15, 2026",
 };

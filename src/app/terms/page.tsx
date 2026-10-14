@@ -8,114 +8,93 @@ export default function TermsPage() {
   return (
     <LegalLayout title="Terms of Service">
       <p>
-        These Terms of Service (&quot;Terms&quot;) govern your use of{" "}
-        {site.name} (the &quot;Service&quot;). By using the Service you agree
-        to these Terms.
+        These Terms of Service (&quot;Terms&quot;) apply to {site.name} (the
+        &quot;Service&quot;), a private tool built and operated by{" "}
+        {site.owner} (&quot;the Owner&quot;).
       </p>
 
       <section>
-        <h2>1. The Service</h2>
+        <h2>1. What the Service is</h2>
         <p>
-          {site.name} is a content planning tool for creators. It lets you
-          organize video ideas and scripts, schedule content, view performance
-          statistics of your own channel, and receive AI-generated content
-          suggestions. Where you choose to connect your TikTok account, the
-          Service may also read your own profile and video information and help
-          you upload or publish your own videos.
+          The Service is a personal content management tool used by the Owner
+          to manage the Owner&apos;s own short-form video channel. It helps
+          organize video ideas and scripts, plan a content calendar, view
+          performance statistics of the Owner&apos;s own channel, and receive
+          AI-generated content suggestions. Where the Owner chooses to connect
+          a TikTok account, the Service reads that account&apos;s profile and
+          video information.
         </p>
       </section>
 
       <section>
-        <h2>2. Accounts and access</h2>
+        <h2>2. Private, restricted access</h2>
         <ul>
-          <li>You sign in with your Google account.</li>
           <li>
-            You are responsible for activity under your account and for keeping
-            your credentials secure.
+            The Service is <strong>not offered to the public</strong>. Access is
+            limited to the Owner&apos;s own Google account; no other accounts
+            are registered or permitted.
           </li>
           <li>
-            You must be old enough to use the connected platforms under their
-            own rules.
+            The Service only accesses data belonging to the account that the
+            Owner has personally connected and authorized.
           </li>
         </ul>
       </section>
 
       <section>
-        <h2>3. Connected third-party platforms</h2>
+        <h2>3. Third-party platforms</h2>
         <p>
-          When you connect your TikTok account, you also agree to be bound by
-          TikTok&apos;s Terms of Service and Community Guidelines. The Service
-          only acts on your behalf with your explicit authorization, and you
-          can revoke that authorization at any time from your TikTok settings
-          or from within the Service.
+          Use of TikTok and Google through the Service is also subject to
+          TikTok&apos;s Terms of Service and Community Guidelines and
+          Google&apos;s Terms of Service. The Service acts only with the
+          Owner&apos;s explicit authorization, which can be revoked at any time
+          from the TikTok or Google account settings or from within the
+          Service. The Service never posts content to a connected account
+          without the Owner&apos;s explicit confirmation.
         </p>
       </section>
 
       <section>
-        <h2>4. Your content</h2>
-        <p>
-          You retain all rights to the content you create, upload or schedule.
-          You are solely responsible for your content and for ensuring it
-          complies with applicable law, the rights of others, and the rules of
-          the platforms you publish to. The Service will never publish content
-          to your account without your explicit confirmation.
-        </p>
-      </section>
-
-      <section>
-        <h2>5. AI-generated suggestions</h2>
+        <h2>4. AI-generated suggestions</h2>
         <p>
           The Service may use third-party AI models to generate ideas, scripts,
-          captions and hashtags. Suggestions may be inaccurate or unsuitable;
-          you are responsible for reviewing them before use. Fitness-related
-          suggestions are for general content purposes only and are not medical
-          or professional advice.
+          captions and hashtags. Suggestions may be inaccurate and are reviewed
+          by the Owner before any use. Fitness-related suggestions are for
+          general content purposes only and are not medical or professional
+          advice.
         </p>
       </section>
 
       <section>
-        <h2>6. Acceptable use</h2>
-        <p>You agree not to:</p>
-        <ul>
-          <li>use the Service for unlawful, misleading or abusive activity;</li>
-          <li>attempt to disrupt or gain unauthorized access to the Service;</li>
-          <li>
-            use the Service to violate the terms of TikTok or any other
-            connected platform.
-          </li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>7. Availability and changes</h2>
+        <h2>5. Acceptable use</h2>
         <p>
-          The Service is provided &quot;as is&quot; and &quot;as available&quot;
-          without warranties of any kind. We may modify, suspend or discontinue
-          any part of the Service at any time and may update these Terms; the
-          &quot;Last updated&quot; date above shows the latest version.
+          The Service is used only in compliance with applicable law and the
+          rules of the platforms it connects to. It is not used to spam,
+          mislead, scrape data belonging to other people, or access accounts
+          the Owner does not control.
         </p>
       </section>
 
       <section>
-        <h2>8. Limitation of liability</h2>
+        <h2>6. Availability and liability</h2>
         <p>
-          To the maximum extent permitted by law, we are not liable for any
-          indirect or consequential damages, or for loss of data, revenue or
-          account standing on third-party platforms arising from your use of
-          the Service.
+          The Service is provided &quot;as is&quot; without warranties. The
+          Owner may change, suspend or discontinue it at any time, and is not
+          liable for losses arising from its use to the maximum extent
+          permitted by law.
         </p>
       </section>
 
       <section>
-        <h2>9. Termination</h2>
+        <h2>7. Changes</h2>
         <p>
-          You may stop using the Service and request deletion of your data at
-          any time. We may suspend access if these Terms are violated.
+          These Terms may be updated; the &quot;Last updated&quot; date above
+          shows the latest version.
         </p>
       </section>
 
       <section>
-        <h2>10. Contact</h2>
+        <h2>8. Contact</h2>
         <p>
           Questions about these Terms:{" "}
           <a className="underline" href={`mailto:${site.contactEmail}`}>
