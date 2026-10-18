@@ -1,26 +1,105 @@
 @import "tailwindcss";
 
+/* Design tokens lấy từ Figma "TikTok Channel Manager". Light là mặc định,
+   dark theo prefers-color-scheme hoặc data-theme do người dùng chọn. */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-page: #f4f5f7;
+  --bg-surface: #ffffff;
+  --bg-surface-subtle: #f9fafb;
+  --bg-sidebar: #ffffff;
+  --bg-primary-soft: #ffe9ee;
+  --border-default: #e4e7ec;
+  --text-primary: #101828;
+  --text-secondary: #475467;
+  --text-muted: #667085;
+  --brand-primary: #e3194a;
+  --brand-on-primary: #ffffff;
+  --status-success: #12b76a;
+  --status-danger: #d92d20;
+  --status-warning: #dc6803;
+  --shadow-card-v: 0px 16px 40px -8px rgba(0, 0, 0, 0.08);
+  --shadow-tooltip-v: 0px 6px 16px -4px rgba(0, 0, 0, 0.1);
+  color-scheme: light;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+:root[data-theme="dark"] {
+  --bg-page: #0a0c10;
+  --bg-surface: #14171e;
+  --bg-surface-subtle: #1a1e27;
+  --bg-sidebar: #0f1218;
+  --bg-primary-soft: #2b1219;
+  --border-default: #262b36;
+  --text-primary: #f5f7fa;
+  --text-secondary: #b4bccb;
+  --text-muted: #8a93a5;
+  --brand-primary: #f0305c;
+  --status-success: #32d583;
+  --status-danger: #f97066;
+  --status-warning: #fdb022;
+  --shadow-card-v: 0px 16px 40px -8px rgba(0, 0, 0, 0.45);
+  --shadow-tooltip-v: 0px 6px 16px -4px rgba(0, 0, 0, 0.5);
+  color-scheme: dark;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  :root:not([data-theme="light"]) {
+    --bg-page: #0a0c10;
+    --bg-surface: #14171e;
+    --bg-surface-subtle: #1a1e27;
+    --bg-sidebar: #0f1218;
+    --bg-primary-soft: #2b1219;
+    --border-default: #262b36;
+    --text-primary: #f5f7fa;
+    --text-secondary: #b4bccb;
+    --text-muted: #8a93a5;
+    --brand-primary: #f0305c;
+    --status-success: #32d583;
+    --status-danger: #f97066;
+    --status-warning: #fdb022;
+    --shadow-card-v: 0px 16px 40px -8px rgba(0, 0, 0, 0.45);
+    --shadow-tooltip-v: 0px 6px 16px -4px rgba(0, 0, 0, 0.5);
+    color-scheme: dark;
   }
 }
 
+@theme inline {
+  --color-page: var(--bg-page);
+  --color-surface: var(--bg-surface);
+  --color-subtle: var(--bg-surface-subtle);
+  --color-sidebar: var(--bg-sidebar);
+  --color-soft: var(--bg-primary-soft);
+  --color-line: var(--border-default);
+  --color-ink: var(--text-primary);
+  --color-ink-2: var(--text-secondary);
+  --color-muted: var(--text-muted);
+  --color-brand: var(--brand-primary);
+  --color-on-brand: var(--brand-on-primary);
+  --color-ok: var(--status-success);
+  --color-bad: var(--status-danger);
+  --color-warn: var(--status-warning);
+  --shadow-card: var(--shadow-card-v);
+  --shadow-tooltip: var(--shadow-tooltip-v);
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono);
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-page);
+  color: var(--text-primary);
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+/* Asset Figma có bản riêng cho light/dark: hiện đúng bản theo theme. */
+.asset-dark { display: none; }
+:root[data-theme="dark"] .asset-light { display: none; }
+:root[data-theme="dark"] .asset-dark { display: block; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .asset-light { display: none; }
+  :root:not([data-theme="light"]) .asset-dark { display: block; }
+}
+
+/* Tailwind v4 bỏ cursor:pointer mặc định của button */
+button:not(:disabled),
+[role="button"]:not(:disabled) {
+  cursor: pointer;
 }

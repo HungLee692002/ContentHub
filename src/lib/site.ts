@@ -5,4 +5,5 @@ export const site = {
   contactEmail:
     process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "hungle692002@gmail.com",
   lastUpdated: "October 15, 2026",
+  lastUpdatedVi: "15/10/2026",
 };

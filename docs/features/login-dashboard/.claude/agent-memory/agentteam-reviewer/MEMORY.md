@@ -1,0 +1,1 @@
+- [Mẫu lỗi review research](project_research_review_patterns.md) — dẫn chiếu dòng lệch nhẹ, nhãn Hướng A/B/C trùng, câu hỏi mở gộp
